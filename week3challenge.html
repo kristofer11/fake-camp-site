@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans">
-    <link rel="stylesheet" href="css/week-3-challenge-style.css">
+    <link rel="stylesheet" href="week-3-challenge-style.css">
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
@@ -24,9 +24,58 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>                    
                 </div>
-                <div class="col-md-4 col-xl-2 mt-4">
-                    <a href="#reserveForm" id="reserve-btn" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" title="Or call us 1-206-555-1234">Reserve Campsite</a>
-                </div>
+                <span class="navbar-text ml-auto col-sm-3">
+                    <a class="btn btn-lg btn-info" role="button" data-toggle="modal" data-target="#reserveModal" data-toggle="tooltip" data-placement="bottom" title="Click here if you're ready to book a site!">
+                       Reserve Site
+                    </a>
+                </span>
+                <div class="modal" role="dialog" id="reserveModal">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 style="color:#4e543d" class="modal-title">Reserve Site</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">                
+                            <div class="container">
+                                <div class="row row-content">
+                                    <div class="mx-auto">
+                                        <form id="reserveForm">
+                                            <div class="row">
+                                                <label class="col-form-label col-sm-6" for="campers" style="color: blue">Number of Campers</label>
+                                                <div class="col">
+                                                    <select class="form-control" name="campers" id="campers">
+                                                        <option value="">Select...</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-form-label col-sm-6" for="date" style="color: blue">Date</label>
+                                                <div class="col-sm-6">
+                                                        <input class="form-control" type="date" id="date" name="date" placeholder="">                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Search</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
             </div>
         </div>
     </header>
@@ -46,7 +95,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html" data-toggle="tooltip" data-placement="bottom" title="Give us a call!"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <a role="button" data-toggle="modal" data-target="#loginModal" data-toggle="tooltip" data-placement="bottom" title="Login">
                         <i class="fa fa-sign-in"></i>Login
                     </a>
                 </span>
